@@ -9,6 +9,10 @@
     border-bottom: 1px solid lightgray;
     padding: 8px;
 }
+.header__right{
+    min-width: 10vw;
+}
+
 .chat__info{
     flex: 1;
     margin-left: 10px;
@@ -20,5 +24,33 @@
 .chat__body{
     background-color: #000;
     flex: 1;
+    background-image: url("https://i.pinimg.com/originals/ab/ab/60/abab60f06ab52fa7846593e6ae0c9a0b.png");
+   
+    padding: 25px 10px;
+    overflow-y: auto;
+}
+.chat__body .chat__massage{
+    position: relative;
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 30px;
 }
 
+.chat_name{
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.chat_time{
+    font-size: 10px;
+    margin-left: 5px;
+}
+.chat_recever{
+    background-color: #d6f8c6 !important;
+     margin-left: auto;
+}

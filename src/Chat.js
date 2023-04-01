@@ -27,7 +27,17 @@ const Chat = () => {
     </div>
       </div>
     <div className="chat__body">
-        <p className="chat__massage">
+        <p className="chat__massage chat_recever">
+            <span className="chat_name">Pranab kumar</span>
+            This is test massage
+            <span className="chat_time">12:40pm</span>
+        </p>
+        <p className="chat__massage chat_recever">
+            <span className="chat_name">Pranab kumar</span>
+            This is test massage 
+            <span className="chat_time">12:40pm</span>
+        </p>
+        <p className="chat__massage ">
             <span className="chat_name">Pranab kumar</span>
             This is test massage
             <span className="chat_time">12:40pm</span>
