@@ -5,6 +5,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import './css/SlideBar.css'
 import { Search } from "@mui/icons-material";
+import SlideChat from "./SlideChat";
 
 const SildeBar = () => {
   return (
@@ -28,6 +29,12 @@ const SildeBar = () => {
             <Search></Search>
             <input type="text" placeholder="Search or Start a new Chat"/>
         </div>
+      </div>
+      <div className="Chat_Slide">
+        <SlideChat/>
+        <SlideChat/>
+        <SlideChat/>
+        <SlideChat/>
       </div>
     </div>
   );

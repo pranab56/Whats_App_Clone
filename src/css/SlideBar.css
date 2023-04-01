@@ -41,3 +41,24 @@
     margin-left: 10px; 
 }
 
+.Chat_Slide{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.slide__chat{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray; 
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slide__chat:hover{
+    background-color: #ededed;
+}
+
+.Chat__text{
+    margin-left: 10px;
+}
