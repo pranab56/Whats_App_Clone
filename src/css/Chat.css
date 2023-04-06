@@ -54,3 +54,22 @@
     background-color: #d6f8c6 !important;
      margin-left: auto;
 }
+.chat__footer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ededed;
+}
+.chat__footer input{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+    margin-left: 10px;
+    
+}
+.chat__footer form{
+    flex: 1;
+
+}

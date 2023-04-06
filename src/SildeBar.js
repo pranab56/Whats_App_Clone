@@ -1,13 +1,27 @@
 import { Avatar, IconButton } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./css/SlideBar.css";
 import { Search } from "@mui/icons-material";
 import SlideChat from "./SlideChat";
+import db from "./firebase";
 
 const SildeBar = () => {
+  const [rooms, setRooms] = useState([]);
+
+  useEffect(() => {
+    db.collection("rooms").onSnapshot((snapshot) => {
+      setRooms(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
   return (
     <div className="slidebar">
       <div className="slide__header">
@@ -35,9 +49,9 @@ https://api.dicebear.com/6.x/pixel-art/svg?seed=John`}
       </div>
       <div className="Chat_Slide">
         <SlideChat addnewChat />
-        <SlideChat />
-        <SlideChat />
-        <SlideChat />
+        {rooms.map((room) => (
+          <SlideChat key={room.id} id={room.id} room={room} />
+        ))}
       </div>
     </div>
   );

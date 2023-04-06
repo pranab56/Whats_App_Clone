@@ -2,6 +2,8 @@ import { Avatar, IconButton } from "@mui/material";
 import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import MicIcon from '@mui/icons-material/Mic';
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import './css/Chat.css';
 
@@ -42,6 +44,20 @@ const Chat = () => {
             This is test massage
             <span className="chat_time">12:40pm</span>
         </p>
+    </div>
+    <div className="chat__footer">
+    <IconButton>
+    <EmojiEmotionsIcon/>
+    </IconButton>
+   <IconButton>
+   <AttachFileIcon/>
+   </IconButton>
+    <form>
+        <input type="text" placeholder="type a massage" />
+    </form>
+    <IconButton>
+    <MicIcon/>
+    </IconButton>
     </div>
     </div>
   );
